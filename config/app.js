@@ -9,9 +9,8 @@ let logger = require('morgan');
 let mongoose = require('mongoose');
 let DB = require('./db');
 
-// point mongoose to the DB URI
-mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
-
+// point mongoose to the DB URI   Database:group5_simplesurvey
+mongoose.connect(DB.URI, {dbName:"group5_simplesurvey",useNewUrlParser: true, useUnifiedTopology: true});
 let mongoDB = mongoose.connection;
 mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
 mongoDB.once('open', ()=>{
