@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-/**dasdasdasdad
+/**
  * Module dependencies.
  */
 
