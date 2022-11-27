@@ -1,0 +1,140 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+<main class="container">
+    <div class="jumbotron">
+        <h1 class="display-4"><%= title %></h1>      
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col-8">
+
+            <form method="POST">
+                <div class="form-group">
+                <label for="surveyTitle">Survey Title</label>
+                <input type="text" class="form-control" id="surveyTitle" name="surveyTitle" value="<%= surveys.title %>" required>
+                </div>
+
+                <!--Question 01-->
+                <div class="form-group">
+                    <label for="question1">Question 1: </label>
+                    <input type="text" class="form-control" id="question1" name="question1" value="<%= surveys.q1 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q1choice1">Choice 1 for Question 1: </label>
+                    <input type="text" class="form-control" id="q1choice1" name="q1choice1" value="<%= surveys.q1o1 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q1choice2">Choice 2 for Question 1: </label>
+                    <input type="text" class="form-control" id="q1choice2" name="q1choice2" value="<%= surveys.q1o2 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q1choice3">Choice 3 for Question 1: </label>
+                    <input type="text" class="form-control" id="q1choice3" name="q1choice3" value="<%= surveys.q1o3 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q1choice4">Choice 4 for Question 1: </label>
+                    <input type="text" class="form-control" id="q1choice4" name="q1choice4" value="<%= surveys.q1o4 %>" required>
+                </div>
+
+                <!--Question 02-->
+                <div class="form-group">
+                    <label for="question2">Question 2: </label>
+                    <input type="text" class="form-control" id="question2" name="question2" value="<%= surveys.q2 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q2choice1">Choice 1 for Question 2: </label>
+                    <input type="text" class="form-control" id="q2choice1" name="q2choice1" value="<%= surveys.q2o1 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q2choice2">Choice 2 for Question 2: </label>
+                    <input type="text" class="form-control" id="q2choice2" name="q2choice2" value="<%= surveys.q2o2 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q2choice3">Choice 3 for Question 2: </label>
+                    <input type="text" class="form-control" id="q2choice3" name="q2choice3" value="<%= surveys.q2o3 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q2choice4">Choice 4 for Question 2: </label>
+                    <input type="text" class="form-control" id="q2choice4" name="q2choice4" value="<%= surveys.q2o4 %>" required>
+                </div>
+
+                <!--Question 03-->
+                <div class="form-group">
+                    <label for="question3">Question 3: </label>
+                    <input type="text" class="form-control" id="question3" name="question3" value="<%= surveys.q3 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q3choice1">Choice 1 for Question 3: </label>
+                    <input type="text" class="form-control" id="q3choice1" name="q3choice1" value="<%= surveys.q3o1 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q3choice2">Choice 2 for Question 3: </label>
+                    <input type="text" class="form-control" id="q3choice2" name="q3choice2" value="<%= surveys.q3o2 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q3choice3">Choice 3 for Question 3: </label>
+                    <input type="text" class="form-control" id="q3choice3" name="q3choice3" value="<%= surveys.q3o3 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q3choice4">Choice 4 for Question 3: </label>
+                    <input type="text" class="form-control" id="q3choice4" name="q3choice4" value="<%= surveys.q3o4 %>" required>
+                </div>
+
+                <!--Question 04-->
+                <div class="form-group">
+                    <label for="question4">Question 4: </label>
+                    <input type="text" class="form-control" id="question4" name="question4" value="<%= surveys.q4 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q4choice1">Choice 1 for Question 4: </label>
+                    <input type="text" class="form-control" id="q4choice1" name="q4choice1" value="<%= surveys.q4o1 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q4choice2">Choice 2 for Question 4: </label>
+                    <input type="text" class="form-control" id="q4choice2" name="q4choice2" value="<%= surveys.q4o2 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q4choice3">Choice 3 for Question 4: </label>
+                    <input type="text" class="form-control" id="q4choice3" name="q4choice3" value="<%= surveys.q4o3 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q4choice4">Choice 4 for Question 4: </label>
+                    <input type="text" class="form-control" id="q4choice4" name="q4choice4" value="<%= surveys.q4o4 %>" required>
+                </div>
+
+                <!--Question 05-->
+                <div class="form-group">
+                    <label for="question5">Question 5: </label>
+                    <input type="text" class="form-control" id="question5" name="question5" value="<%= surveys.q5 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q5choice1">Choice 1 for Question 5: </label>
+                    <input type="text" class="form-control" id="q5choice1" name="q5choice1" value="<%= surveys.q5o1 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q5choice2">Choice 2 for Question 5: </label>
+                    <input type="text" class="form-control" id="q5choice2" name="q5choice2" value="<%= surveys.q5o2 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q5choice3">Choice 3 for Question 5: </label>
+                    <input type="text" class="form-control" id="q5choice3" name="q5choice3" value="<%= surveys.q5o3 %>" required>
+                </div>
+                <div class="form-group">
+                    <label for="q5choice4">Choice 4 for Question 5: </label>
+                    <input type="text" class="form-control" id="q5choice4" name="q5choice4" value="<%= surveys.q5o4 %>" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary"><%= buttonName %></button>
+                <a href="/surveys" class="btn btn-warning">Cancel    </a>
+            </form>
+        </div>
+    </div>
+
+    <div class="buffer"></div>
+    
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

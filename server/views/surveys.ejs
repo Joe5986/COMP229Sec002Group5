@@ -1,0 +1,40 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+<main class="container">
+    <div class="jumbotron">
+        <h1 class="display-4"><%= title %></h1>      
+    </div>
+      
+    <div class="row justify-content-md-center">
+        <div class="col-8">
+            <a href="/surveys/create" class="btn btn-primary btn-lg">Add New Survey</a>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i=0; i < surveys.length; i++) { %>
+                    <tr>
+                        <td><%= surveys[i].title %></td>
+                        <td>
+                            <a href="surveys/edit/<%= surveys[i]._id %>" class="btn btn-primary btn-sm">Edit</a>
+                        </td>
+                        <td>
+                            <a href="surveys/delete/<%= surveys[i]._id %>" class="btn btn-warning btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>

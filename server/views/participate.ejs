@@ -1,0 +1,79 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+<main class="container">
+    <div class="jumbotron">
+        <h1 class="display-4"><%= surveys.title %></h1>     
+        
+    </div>
+      
+    <div class="row justify-content-md-center">
+        <div class="col-8">
+            <form method="POST">
+                <input type="text" id="surveyTitle" name="surveyTitle" value="<%= surveys.title %>" hidden> 
+                <h3><%= surveys.q1 %></h3>
+                <input type="text" id="question1" name="question1" value="<%= surveys.q1 %>" hidden>
+                <input type="radio" id="q1o1" name="answerToQuestion1" value="<%= surveys.q1o1 %>">
+                <label for="q1o1"><%= surveys.q1o1 %></label><br>
+                <input type="radio" id="q1o2" name="answerToQuestion1" value="<%= surveys.q1o2 %>">
+                <label for="q1o2"><%= surveys.q1o2 %></label><br>
+                <input type="radio" id="q1o3" name="answerToQuestion1" value="<%= surveys.q1o3 %>">
+                <label for="q1o3"><%= surveys.q1o3 %></label><br>
+                <input type="radio" id="q1o4" name="answerToQuestion1" value="<%= surveys.q1o4 %>">
+                <label for="q1o4"><%= surveys.q1o4 %></label><br>
+
+                <h3><%= surveys.q2 %></h3>
+                <input type="text" id="question2" name="question2" value="<%= surveys.q2 %>" hidden>
+                <input type="radio" id="q2o1" name="answerToQuestion2" value="<%= surveys.q2o1 %>">
+                <label for="q2o1"><%= surveys.q2o1 %></label><br>
+                <input type="radio" id="q2o1" name="answerToQuestion2" value="<%= surveys.q2o2 %>">
+                <label for="q2o2"><%= surveys.q2o2 %></label><br>
+                <input type="radio" id="q2o3" name="answerToQuestion2" value="<%= surveys.q2o3 %>">
+                <label for="q2o3"><%= surveys.q2o3 %></label><br>
+                <input type="radio" id="q2o4" name="answerToQuestion2" value="<%= surveys.q2o4 %>">
+                <label for="q2o4"><%= surveys.q2o4 %></label><br>
+
+                <h3><%= surveys.q3 %></h3>
+                <input type="text" id="question3" name="question3" value="<%= surveys.q3 %>" hidden>
+                <input type="radio" id="q3o1" name="answerToQuestion3" value="<%= surveys.q3o1 %>">
+                <label for="q3o1"><%= surveys.q3o1 %></label><br>
+                <input type="radio" id="q3o1" name="answerToQuestion3" value="<%= surveys.q3o2 %>">
+                <label for="q3o2"><%= surveys.q3o2 %></label><br>
+                <input type="radio" id="q3o3" name="answerToQuestion3" value="<%= surveys.q3o3 %>">
+                <label for="q3o3"><%= surveys.q3o3 %></label><br>
+                <input type="radio" id="q3o4" name="answerToQuestion3" value="<%= surveys.q3o4 %>">
+                <label for="q3o4"><%= surveys.q3o4 %></label><br>
+
+                <h3><%= surveys.q4 %></h3>
+                <input type="text" id="question4" name="question4" value="<%= surveys.q4 %>" hidden>
+                <input type="radio" id="q4o1" name="answerToQuestion4" value="<%= surveys.q4o1 %>">
+                <label for="q4o1"><%= surveys.q4o1 %></label><br>
+                <input type="radio" id="q4o1" name="answerToQuestion4" value="<%= surveys.q4o2 %>">
+                <label for="q4o2"><%= surveys.q4o2 %></label><br>
+                <input type="radio" id="q4o3" name="answerToQuestion4" value="<%= surveys.q4o3 %>">
+                <label for="q4o3"><%= surveys.q4o3 %></label><br>
+                <input type="radio" id="q4o4" name="answerToQuestion4" value="<%= surveys.q4o4 %>">
+                <label for="q4o4"><%= surveys.q4o4 %></label><br>
+
+                <h3><%= surveys.q5 %></h3>
+                <input type="text" id="question5" name="question5" value="<%= surveys.q5 %>" hidden>
+                <input type="radio" id="q5o1" name="answerToQuestion5" value="<%= surveys.q5o1 %>">
+                <label for="q5o1"><%= surveys.q5o1 %></label><br>
+                <input type="radio" id="q5o1" name="answerToQuestion5" value="<%= surveys.q5o2 %>">
+                <label for="q5o2"><%= surveys.q5o2 %></label><br>
+                <input type="radio" id="q5o3" name="answerToQuestion5" value="<%= surveys.q5o3 %>">
+                <label for="q4o3"><%= surveys.q5o3 %></label><br>
+                <input type="radio" id="q5o4" name="answerToQuestion5" value="<%= surveys.q5o4 %>">
+                <label for="q5o4"><%= surveys.q5o4 %></label><br>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="/home" class="btn btn-warning">Cancel    </a>
+            </form>
+        </div>
+    </div>
+    <div class="buffer"></div>
+</main>
+
+<%- include partials/bottom_nav.ejs %>
+
+<%- include partials/footer.ejs %>
