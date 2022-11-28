@@ -11,3 +11,4 @@ Ban, Seung Hyeon
 Boglo, Joseph Paul-Daniel
 Tran, Kevin #301154481
 Zhou, Yingjie #301179194
+Wang, Haoyu #301237086
