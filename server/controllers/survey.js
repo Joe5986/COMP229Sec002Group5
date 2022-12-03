@@ -12,7 +12,7 @@ module.exports.displaySurveysPage = (req, res, next) => {
             console.error(err);
             res.end();
         }
-        res.render('surveys', {title: 'Surveys', surveys: data});
+        res.render('surveys', {title: 'Surveys', surveys: data,displayName: req.user ? req.user.displayName : ''});
     });  
 }
 
