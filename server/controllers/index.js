@@ -3,6 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
+//create the survey model
 let Survey = require('../models/survey');
 
 // create the User Model instance

@@ -1,4 +1,6 @@
 let express = require('express');
+let mongoose = require('mongoose');
+let router = express.Router();
 
 let Survey = require('../models/survey');
 
