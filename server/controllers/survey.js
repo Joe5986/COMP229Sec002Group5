@@ -17,7 +17,7 @@ module.exports.displaySurveysPage = (req, res, next) => {
 }
 
 module.exports.displayCreatePage = (req, res, next) => {
-    res.render('create-edit', {title: 'Create Survey', surveys: '', buttonName: 'Create'});
+    res.render('create-edit', {title: 'Create Survey',displayName: req.user ? req.user.displayName : '', surveys: '', buttonName: 'Create'});
 }
 
 module.exports.processCreatePage = (req, res, next) => {
@@ -67,7 +67,7 @@ module.exports.displayEditPage = (req, res, next) => {
           console.log(err);
           res.end();
         }
-        res.render('create-edit', {title:'Edit Survey', surveys:surveyToEdit, buttonName: 'Edit'})
+        res.render('create-edit', {title:'Edit Survey',displayName: req.user ? req.user.displayName : '', surveys:surveyToEdit, buttonName: 'Edit'})
       });
 }
 
@@ -132,7 +132,7 @@ module.exports.displayParticipatePage = (req, res, next) => {
           console.log(err);
           res.end();
         }
-        res.render('participate', {title:'Participate', surveys:surveyToEdit})
+        res.render('participate', {title:'Participate',displayName: req.user ? req.user.displayName : '', surveys:surveyToEdit})
       });
 }
 
