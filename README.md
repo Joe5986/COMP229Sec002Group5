@@ -3,7 +3,7 @@
 For Centennialcollege COMP229
 
 a Survey site
-https://comp229sec2group5.herokuapp.com/
+(https://comp229sec2group5p3.herokuapp.com/)
 
 By:
 Afsa, Maliha
