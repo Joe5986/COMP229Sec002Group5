@@ -2,6 +2,8 @@ let express = require('express');
 let mongoose = require('mongoose');
 let router = express.Router();
 
+let jwt = require('jsonwebtoken');
+
 let Survey = require('../models/survey');
 
 module.exports.displaySurveysPage = (req, res, next) => {
