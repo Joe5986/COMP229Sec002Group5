@@ -14,12 +14,12 @@ module.exports.displaySurveysPage = (req, res, next) => {
             console.error(err);
             res.end();
         }
-        res.render('surveys', {title: 'Surveys', surveys: data,displayName: req.user ? req.user.displayName : ''});
+        res.render('survey/surveys', {title: 'Surveys', surveys: data,displayName: req.user ? req.user.displayName : ''});
     });  
 }
 
 module.exports.displayCreatePage = (req, res, next) => {
-    res.render('create-edit', {title: 'Create Survey',displayName: req.user ? req.user.displayName : '', surveys: '', buttonName: 'Create'});
+    res.render('survey/create-edit', {title: 'Create Survey',displayName: req.user ? req.user.displayName : '', surveys: '', buttonName: 'Create'});
 }
 
 module.exports.processCreatePage = (req, res, next) => {
@@ -57,7 +57,7 @@ module.exports.processCreatePage = (req, res, next) => {
             console.log(err);
             res.end(err);
         }
-        res.redirect('/surveys');
+        res.redirect('/survey/surveys');
     });
 }
 
@@ -69,7 +69,7 @@ module.exports.displayEditPage = (req, res, next) => {
           console.log(err);
           res.end();
         }
-        res.render('create-edit', {title:'Edit Survey',displayName: req.user ? req.user.displayName : '', surveys:surveyToEdit, buttonName: 'Edit'})
+        res.render('survey/create-edit', {title:'Edit Survey',displayName: req.user ? req.user.displayName : '', surveys:surveyToEdit, buttonName: 'Edit'})
       });
 }
 
@@ -111,7 +111,7 @@ module.exports.processEditPage = (req, res, next) => {
         console.log(err);
         res.end();
       });
-      res.redirect('/surveys');
+      res.redirect('/survey/surveys');
 }
 
 module.exports.processDeletePage = (req, res, next) => {
@@ -122,7 +122,7 @@ module.exports.processDeletePage = (req, res, next) => {
             console.log(err);
             res.end(err);
         }
-        res.redirect('/surveys');
+        res.redirect('/survey/surveys');
     });
 }
 
@@ -134,7 +134,7 @@ module.exports.displayParticipatePage = (req, res, next) => {
           console.log(err);
           res.end();
         }
-        res.render('participate', {title:'Participate',displayName: req.user ? req.user.displayName : '', surveys:surveyToEdit})
+        res.render('survey/participate', {title:'Participate',displayName: req.user ? req.user.displayName : '', surveys:surveyToEdit})
       });
 }
 
